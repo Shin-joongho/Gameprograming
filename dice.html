@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            주사위 그리기
+        </title>
+    </head>
+    <body>
+        <canvas id="dices"
+            width="1000"
+            height="1000"
+            style="background-color: white;"
+        ><p> 죄송합니다 </p>
+        </canvas>
+
+        <script>
+            var canvas = document.getElementById("dices");
+            var dice1 = canvas.getContext("2d");
+            var dice2 = canvas.getContext("2d");
+            var dice3 = canvas.getContext("2d");
+            var dice4 = canvas.getContext("2d");
+            var dice5 = canvas.getContext("2d");
+            var dice6 = canvas.getContext("2d");
+
+            dice1.beginPath();
+            dice1.arc(175,175,10,0,2*Math.PI,false);
+
+            
+            dice1.fill();
+            for(var i=0; i<6; i++){
+                if(i<3){
+                    dice1.rect(100+i*300,100,150,150)
+                }
+                else{
+                    dice1.rect(100+(i-3)*300,500,150,150)
+                }
+                for(var j=0;j>i;j++){
+                    
+                }
+            }
+            dice1.strokeStyle = "black";
+            dice1.stroke();
+            dice1.fillStyle = "black";
+            
+            dice2.beginPath();
+            dice2.arc(420,125,10,0,2*Math.PI,false);
+            dice2.arc(530,225,10,0,2*Math.PI,false);
+            dice2.fillStyle = "black";
+            dice2.fill();
+
+            dice3.beginPath();
+            dice3.fillStyle = "black";
+            dice3.arc(720,120,10,0,2*Math.PI,false);
+            dice3.arc(775,175,10,0,2*Math.PI,true);
+            dice3.arc(830,230,10,0,2*Math.PI,false);
+            dice3.fill();
+
+            dice4.beginPath();
+            dice4.fillStyle = "black";
+            dice4.arc(125,525,10,0,2*Math.PI,false);
+            dice4.moveTo(225,525);
+            dice4.arc(225,525,10,0,2*Math.PI,false);
+            dice4.moveTo(125,625);
+            dice4.arc(125,625,10,0,2*Math.PI,false);
+            dice4.moveTo(225,625);
+            dice4.arc(225,625,10,0,2*Math.PI,false);
+            dice4.fill();
+
+            dice5.beginPath();
+            dice5.fillStyle = "black";
+            dice5.arc(425,525,10,0,2*Math.PI,false);
+            dice5.moveTo(525,525);
+            dice5.arc(525,525,10,0,2*Math.PI,false);
+            dice5.moveTo(425,625);
+            dice5.arc(425,625,10,0,2*Math.PI,false);
+            dice5.moveTo(525,625);
+            dice5.arc(525,625,10,0,2*Math.PI,false);
+            dice5.moveTo(475,575);
+            dice5.arc(475,575,10,0,2*Math.PI,false);
+            dice5.fill();
+
+            dice6.beginPath();
+            dice6.fillStyle = "black";
+            dice6.arc(725,525,10,0,2*Math.PI,false);
+            dice6.moveTo(825,525);
+            dice6.arc(825,525,10,0,2*Math.PI,false);
+            dice6.moveTo(725,625);
+            dice6.arc(725,625,10,0,2*Math.PI,false);
+            dice6.moveTo(825,625);
+            dice6.arc(825,625,10,0,2*Math.PI,false);
+            dice6.moveTo(775,575);
+            dice6.arc(725,575,10,0,2*Math.PI,false);
+            dice6.moveTo(875,575);
+            dice6.arc(825,575,10,0,2*Math.PI,false);
+            dice6.fill();
+        </script>
+    </body>
+</html>
